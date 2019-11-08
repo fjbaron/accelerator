@@ -6,7 +6,6 @@ obtenerDF=function(Nodo,BIN,dirMeta,desde=NA,hasta=NA){
   dfGGIR=data.frame(from=now(),to=now(),day=today(),label="bedGGIRtime") %>% filter(FALSE) %>% as_tibble()
   
   try({
-    
     load(ficFase1)
     
     df=M$metashort %>%
