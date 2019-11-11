@@ -33,6 +33,60 @@ isOn= function(df) {
 
 
 
+VPA_Hildebrand_Child <-  function(df){
+  #' Time in Vigorous Physical Activity for Children (Hildebrand)
+  #' 
+  #' Find intervals of Vigorous Physical Activity (VPA, >6METs) such as jogging or running.
+  #' Criteria: 
+  #' \itemize{
+  #' \item VPA cut-off for children with ENMO metrics, >700mg, according to Hildebrand 2014: Hildebrand M, Van Hees VT, Hansen BH, Ekelund U. Age-group comparibility of raw accelerometer output from wrist- and hipworn monitors. Med Sci Sports Exerc. 2014;46(9):1816–24.
+  #'  \item Non-dominant wrist cut-off point with GENEActiv or Actigraph accelerometer.
+  #'  \item  1-s epochs with 100\% of the time in VPA.
+  #' }
+  #' @param df Dataframe of epochs with two columns: datetime and ENMO
+  #' @return dataframe of time interval matching the criteria
+  #' @export
+  #'
+  enmoOver(df,limInf=700/1000,pctBouts=1,durBoutMin=dseconds(1))
+  }
+
+
+MVPA_Hildebrand_Child  <-  function(df){
+  #' Time in Moderate and Vigorous Physical Activity for Children (Hildebrand)
+  #'
+  #' Find intervals of Moderate and Vigorous Physical Activity (MVPA, >3METs) such as brisk walking.
+  #' Criteria:   
+  #' \itemize{
+  #' \item MVPA cut-off for children with ENMO metrics, >200mg, according to Hildebrand 2014: Hildebrand M, Van Hees VT, Hansen BH, Ekelund U. Age-group comparibility of raw accelerometer output from wrist- and hipworn monitors. Med Sci Sports Exerc. 2014;46(9):1816–24.
+  #' \item Non-dominant wrist cut-off point with GENEActiv or Actigraph accelerometer.
+  #' \item 1-s epochs with 100\% of the time in MVPA.
+  #' }
+  #' @param df Dataframe of epochs with two columns: datetime and ENMO
+  #' @return dataframe of time intervals matching the criteria
+  #' @export
+  #'
+  enmoOver(df,limInf=200 /1000,pctBouts=1,durBoutMin=dseconds(1))}
+
+INA_Hildebrand_Child  <- function(df){
+  #' Time in inactivity for Children (Hildebrand)
+  #' 
+  #' Find intervals of inactivity (INA, <1.5METs) such lying, sitting or standing.
+  #' Criteria: 
+  #' \itemize{
+  #' \item INA inactivity cut-off for children with ENMO metrics <36mg, according to Hildebrand 2017: Hildebrand M, Hansen BH, Van Hees VT, Ekelund U. Evaluation of raw acceleration sedentary thresholds in children and adults. Scand J Med Sci Sports. 2017 Dec;27(12):1814-1823. doi: 10.1111/sms.12795.
+  #' \item Non-dominant wrist cut-off point with Actigraph accelerometer.
+  #' \item 1-s epochs with 100\% of the time in INA.
+  #' }
+  #' @param df Dataframe of epochs with two columns: datetime and ENMO
+  #' @return dataframe of time intervals  matching the criteria
+  #' @export
+  #'
+  enmoUnder(df,limSup=36/1000,pctBouts=1,durBoutMin=dseconds(1))}
+
+
+
+
+
 VPA_B30s=function(df) {
   #' Summarises bouts of Vigorous Physical Activity (VPA, >6METs) such as jogging or running.
   #' Criteria: 30-seconds-bouts with >80% of VPA, treashold ENMO <500mg.
