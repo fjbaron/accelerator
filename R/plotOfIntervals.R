@@ -57,12 +57,12 @@ plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="dai
     theme(
       axis.text.y=element_blank(),
       axis.ticks.y=element_blank(),
-      axis.text.x=element_text(size=8),
+      axis.text.x=element_text(size=10),
       panel.grid.major.x=element_line(colour = 'lightblue'),
       axis.title.y=element_blank(),
       legend.position="top",
       legend.title = element_blank(),
-      strip.text.y = element_text(size = 7,margin=margin()),
+      strip.text.y = element_text(size = 9,margin=margin()),
       panel.spacing.y=unit(0.05, "lines")
     )
   
