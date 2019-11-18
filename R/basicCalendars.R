@@ -131,7 +131,7 @@ genWhen_mostQuiet=function(interval,label="mostQuiet"){
 #'
 #' @return
 #' @export
-genWhen_bed=function(interval,label="bed",durMin=dminutes(160),durMax=dhours(24)){
+genWhen_bedJB=function(interval,label="bed",durMin=dminutes(160),durMax=dhours(24)){
   mayorReposo=genWhen_mostQuiet(interval)
   SIBDormir=interval$SIB %>% intervalIntersectv2(mayorReposo) %>% select(from,to,day)
   QuietoDormir=interval$MuyQuieto %>% intervalIntersectv2(mayorReposo) %>% select(from,to,day)
