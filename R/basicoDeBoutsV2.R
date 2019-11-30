@@ -2,22 +2,6 @@ shiftLeft=function(x)c(x[-1],0)
 shiftRight=function(x)c(0,x[-length(x)])
 
 
-timeQuantile_1=function(intervals,probs=0.5){
-  intervals %>% filter(probs<=probTo & probs>probFrom) %>%
-    mutate(probs=probs) %>%
-    mutate(quantile=from+difftime(to,from)*((probs-probFrom)/(probTo-probFrom)))
-}
-
-
-intervalsQuantiles=function(intervals,probs=c(0.5)){
-  tmp=intervals %>% as_tibble() %>%
-    mutate(duracion=difftime(to,from,units="secs"),
-           probTo=cumsum(as.integer(duracion))/sum(as.integer(duracion)),
-           probFrom=(function(x)c(-1e-9,x[-length(x)]))(probTo)
-    )
-
-  reduce(map(probs,function(probs)timeQuantile_1(tmp,probs)),rbind)
-}
 
 
 

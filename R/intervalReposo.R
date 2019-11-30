@@ -11,7 +11,7 @@
 #' @export
 intervalReposo=function(intervalo1,intervalo2,distance1=dminutes(40), distance2=dminutes(5),distance3=dhours(4),distance4=dminutes(1)){
 
-  if(nrow(intervalo1)>0){
+  if(isTRUE(nrow(intervalo1)>0)){
   intervalo3=intervalo1 %>% connectOverDistance(distance1)  %>%
     connectOverInterval(intervalo2 %>% connectOverDistance(distance2)) %>%
     transmute(from=fromPre,to=toPost)
