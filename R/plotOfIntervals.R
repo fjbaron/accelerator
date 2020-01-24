@@ -15,7 +15,7 @@
 plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="daily",what2Color,epochColumnColor,...){
   dfInt=df %>% select(RAW,what,when) %>% 
     ###      mutate(what=map(what,~list2df(.x,label="what")),
-    mutate (what= map2(what,when, ~ {.x %>% list2df(label="what") %>% intervalIntersectv2(.y %>% pluck(whenConcept)) %>% select(-from,-to) %>% rename(from=fromNew,to=toNew)} )) %>%
+    mutate (what= map2(what,when, ~ {.x  %>% list2df(label="what") %>% select(what,from,to) %>% intervalIntersectv2(.y %>% pluck(whenConcept)) %>% select(-from,-to) %>% rename(from=fromNew,to=toNew)} )) %>%
     select(-when) %>%
     unnest(cols=c(what)) %>%
     mutate(NUM=as.integer(as.factor(RAW))) %>%
@@ -41,7 +41,7 @@ plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="dai
       data_id=str_c(what,";",from,";",to,";",RAW))   %>%
     arrange(what,from_b)
   
-  print(dfIntDias)
+  #print(dfIntDias)
   
   miPaleta1=dfIntDias %>% distinct(what,color)
   miPaleta=miPaleta1$color %>% set_names(miPaleta1$what)

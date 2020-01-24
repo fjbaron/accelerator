@@ -19,12 +19,15 @@ getGGIR=function(base,RAW,start=NA,end=NA,...){
   
   try({
     
-    load(path_part1)
+    if(file.exists(path_part1)) {
+      
+      load(path_part1)
     
-    df=M$metashort %>%
-      mutate(
-        timestamp = with_tz(ymd_hms(timestamp),tz = "Europe/Madrid")
-      ) %>%  select (timestamp,ENMO,anglez) %>% as_tibble()
+      if(!is.null(M$metashort) & !is.null(M$metalong)){
+        df=M$metashort %>%
+          mutate(
+          timestamp = with_tz(ymd_hms(timestamp),tz = "Europe/Madrid")
+        ) %>%  select (timestamp,ENMO,anglez) %>% as_tibble()
     
     
     ##NonWear
@@ -39,6 +42,8 @@ getGGIR=function(base,RAW,start=NA,end=NA,...){
       filter(! (  (difftime(to,from)<dminutes(120) & ( hour(from)>22 | hour(to)<=8)) | difftime(to,from)<dminutes(40)))
     
     df=df %>% mutate(.criterioNW= interval2criterio(df$timestamp,intervalosNW))
+      }
+    }
   })
   
   
@@ -46,7 +51,7 @@ getGGIR=function(base,RAW,start=NA,end=NA,...){
   
   ##Si es posible, añadimo el criterio de Cama GGIR 
   
-  if(!is.null(df)){    
+  if(!is.null(df) ){    
     df$.criteriocamaGGIR=NA_integer_
     if(!file.exists(path_part5)){
       message("No hay fase 5 calculada para ", path_part5)}
@@ -63,17 +68,18 @@ getGGIR=function(base,RAW,start=NA,end=NA,...){
   } 
   
   
-  dfNuevo=df
+  #dfNuevo=df
   # Si al hacer la restricción de fechas no dejamos al bin sin datos, hacerla. Si no quedarnos al menos un dia
   # que haga de testigo
-  if(!is.na(start) & !is.na(end) & difftime(end,start)>=dhours(24)) {
+  if(!is.na(start) & !is.na(end) & difftime(end,start)>=dhours(24) & is.data.frame(df)) {
     df=df %>% filter(timestamp >= start & timestamp <=end)
   }
+
+  if(isTRUE(is.data.frame(df) & nrow(df)>0)){
+   start=df$timestamp[1]
+   end=last(df$timestamp)
+  }
   
-  
-  
-  start=df$timestamp[1]
-  end=last(df$timestamp)
-  
+
   list(FASE1=df,FASE5=dfGGIR,start=start,end=end)
 }

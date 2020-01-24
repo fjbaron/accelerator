@@ -3,18 +3,17 @@
 #' data frame of intervals of Bouts meeting certain criteria,
 #'
 #' @param df data frame with columns .criterio
+#' @param pctBout represents fraction of time that the .criterio must be TRUE
 #' @param durBoutMin minimum amount of time that the condition muest be met to be aconsidered a Bout
-#' @param pctBouts 
+#' @param durEpoch amount of time that represents each row of the dataframe (duration of a epoch usually)
 #' @param units Units of time to show certain summaries. Une of c("secs","mins","hours","days")
-#'
 #' @return a list with data frame of intervals and certain summaries.
 #'
 #' @export
 
-criterio2Interval=function(df,pctBouts=1,durBoutMin=dseconds(5),units="mins"){
+criterio2Interval=function(df,pctBouts=1,durBoutMin=dseconds(5),durEpoch=dseconds(5),units="mins"){
   #df needs to have two columns "timestamp" & .criterioBout
   #Ejemplo: df %>% mutate(.criterio=criterioENMO(.,limInf = 10/100)) %>% criterio2Interval() %>% .$intervals
-  durEpoch=as.duration(df$timestamp[2]-df$timestamp[1])
   windowSize=durBoutMin/durEpoch
 
 
@@ -59,9 +58,11 @@ criterio2Interval=function(df,pctBouts=1,durBoutMin=dseconds(5),units="mins"){
   #}
 
   if(length(result_to)!=length(result_from)){
-    stop("No miden lo mismo 'from' y 'to'")
+    warning("No miden lo mismo 'from' y 'to'")
     #  return(NULL)
   }
 
-data.frame(from=result_from,to=result_to) %>%as_tibble()
+#Revisar
+data.frame(from=result_from) %>% mutate(to=result_to[1:length(result_from)]) %>% filter(from<to) %>% as_tibble()
+#data.frame(from=result_from,to=result_to) %>%as_tibble()
 }
