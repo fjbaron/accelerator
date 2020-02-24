@@ -5,7 +5,7 @@
 \title{summarises Non Wear time.
 Criteria: GGIR. Viene de los epochs, creado en fase 1. FALTA describirlo.}
 \usage{
-nonWear(df)
+nonWear(df, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}

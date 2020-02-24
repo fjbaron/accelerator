@@ -5,7 +5,7 @@
 \title{Summarises bouts of Vigorous Physical Activity (VPA, >6METs) such as jogging or running.
 Criteria: 30-seconds-bouts with >80% of VPA, treashold ENMO <500mg.}
 \usage{
-VPA_B30s(df)
+VPA_B30s(df, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}

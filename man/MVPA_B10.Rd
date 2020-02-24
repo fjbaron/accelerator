@@ -5,7 +5,7 @@
 \title{Summarises bouts of Moderate-to-Vigorous Physical Activity (MVPA, >3METs) such as brisk walking during at least 10 min.
 Criteria: 10-minute-bouts with >80% of MVPA, treashold ENMO <100mg.}
 \usage{
-MVPA_B10(df, limInf = 100/1000)
+MVPA_B10(df, limInf = 100/1000, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}

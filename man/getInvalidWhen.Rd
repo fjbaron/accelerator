@@ -4,7 +4,7 @@
 \alias{getInvalidWhen}
 \title{Title}
 \usage{
-getInvalidWhen(summaryList)
+getInvalidWhen(summaryList, when = NULL)
 }
 \arguments{
 \item{summaryList}{}

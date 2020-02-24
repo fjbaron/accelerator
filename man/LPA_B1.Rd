@@ -5,7 +5,7 @@
 \title{Summarises bouts of Light Physical Activity (LPA, <2,9METs) such as lying, sitting, standing, moving, including light home activities.
 Criteria: 1-minute-bouts with >80% of LPA, treashold ENMO >40 mg, but excluding MVPA+1.}
 \usage{
-LPA_B1(df, limInf = 40/1000, limSup = 100/1000)
+LPA_B1(df, limInf = 40/1000, limSup = 100/1000, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}

@@ -7,7 +7,7 @@ Mainly lying or sitting, but allows for a 20% of interruptions, including quiet 
 Varible used to define In Bed criteria.
 Criteria: 30-minutes-bouts with >80% of inactivity, treashold ENMO <25mg.}
 \usage{
-MuyQuieto(df)
+MuyQuieto(df, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}

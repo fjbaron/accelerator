@@ -4,7 +4,7 @@
 \alias{INA_Hildebrand_Child}
 \title{Time in inactivity for Children (Hildebrand)}
 \usage{
-INA_Hildebrand_Child(df)
+INA_Hildebrand_Child(df, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}

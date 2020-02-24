@@ -5,7 +5,7 @@
 \title{summarises time of Non Wear.
 Criteria: GGIR. Viene de los epochs, creado en fase 1. FALTA describir.}
 \usage{
-isOn(df)
+isOn(df, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}

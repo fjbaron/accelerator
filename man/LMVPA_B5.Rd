@@ -6,7 +6,7 @@
 Can be used to define inactivity BREAKS.
 Criteria: 5min-bouts with >100% of at least LPA, treashold ENMO >40 mg.}
 \usage{
-LMVPA_B5(df)
+LMVPA_B5(df, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}

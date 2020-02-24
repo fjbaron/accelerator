@@ -5,7 +5,7 @@
 \title{summarises acc_onset + acc_wake de fase 5 ggir.
 Criteria: GGIR. Viene de los fase 5. FALTA describirlo.}
 \usage{
-bedGGIR(df)
+bedGGIR(df, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with one columns: datetime}

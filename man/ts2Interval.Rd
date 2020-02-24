@@ -4,7 +4,7 @@
 \alias{ts2Interval}
 \title{Title}
 \usage{
-ts2Interval(ts, nucleos = numCores(4))
+ts2Interval(ts, nucleos = numCores(4), ...)
 }
 \arguments{
 \item{ts}{}

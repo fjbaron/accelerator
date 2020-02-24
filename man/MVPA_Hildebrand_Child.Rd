@@ -4,7 +4,7 @@
 \alias{MVPA_Hildebrand_Child}
 \title{Time in Moderate and Vigorous Physical Activity for Children (Hildebrand)}
 \usage{
-MVPA_Hildebrand_Child(df)
+MVPA_Hildebrand_Child(df, ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and ENMO}
