@@ -51,15 +51,39 @@ genWhen_24h=function(interval,label="24h",first=TRUE,last=TRUE,offsetLabels=dhou
 
 #' Title
 #'
-#' @param horario1 
-#' @param horario2 
+#' @param whenFrom 
+#' @param whenTo 
 #' @param label 
+#' @param offset 
 #'
 #' @return
 #' @export
-genWhen_HorarioToHorarioFrom=function(horario1,horario2,label="horario_1_2"){
-  horario1  %>%  transmute(from=to,day=day,label=label) %>%
-    left_join(horario2 %>% transmute(to=from,day=day),by="day") %>%
+#'
+#' @examples
+genWhen_StartFrom_EndFrom=function(whenFrom,whenTo,label="when_1_2",offset=0){
+  if(is.null(whenFrom)||is.null(whenTo)) return(data.frame(from=now(),to=now(),day=today(),label=label) %>% as_tibble() %>% filter(FALSE))
+  whenFrom  %>%  transmute(from=from,day=day,label=label) %>%
+    left_join(whenTo %>% transmute(to=from,day=day)%>% mutate(day=day+offset),by="day") %>% 
+    filter(from<to) %>% select(from,to,day)%>% mutate(label=label)
+}
+
+
+
+#' Title
+#'
+#' @param whenFrom 
+#' @param whenTo 
+#' @param label 
+#' @param offset 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+genWhen_StartTo_EndFrom=function(whenFrom,whenTo,label="when_1_2",offset=0){
+  if(is.null(whenFrom)||is.null(whenTo)) return(data.frame(from=now(),to=now(),day=today(),label=label) %>% as_tibble() %>% filter(FALSE))
+  whenFrom  %>%  transmute(from=to,day=day,label=label) %>%
+    left_join(whenTo %>% transmute(to=from,day=day) %>% mutate(day=day+offset),by="day") %>%
     filter(from<to) %>% select(from,to,day)%>% mutate(label=label)
 }
 
