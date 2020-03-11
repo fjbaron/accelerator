@@ -7,5 +7,13 @@
 #'
 #' @examples
 ggir2What=function(df){
-  pmap(df,ggir2Interval)
+  cat("\nComputing 'WHAT' intervals using GGIR epochs\n")
+  pb <- progress_estimated(nrow(df))
+  
+  ggir2IntervalWithProgress <- function(...){
+    pb$tick()$print()
+    ggir2Interval(...)
+  }
+  
+  pmap(df,ggir2IntervalWithProgress)
 }

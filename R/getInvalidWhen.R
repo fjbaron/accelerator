@@ -37,13 +37,30 @@ getCascadeInvalid=function(when,dfInvalid){
 #'
 #' @examples
 getInvalidWhen=function(summaryList,when=NULL){
-  result=map(summaryList,currentProject$whenValidity$directInvalidation)
+  cat("\n Computing invalid `WHEN` directly\n")
+  
+  pb <- progress_estimated(length(summaryList))
+  
+  getInvalidWhenWithProgress <- function(...){
+    pb$tick()$print()
+    currentProject$whenValidity$directInvalidation(...)
+  }
+  
+  result=map(summaryList,getInvalidWhenWithProgress)
   
   
+  cat("\n Computing invalid 'WHEN' in cascade \n")
+
   if(!is.null(when) & 
      !is.null(currentProject$whenValidity$cascadeInvalid) &
      length(currentProject$whenValidity$cascadeInvalid)>0){
-    result=map2(when,result,getCascadeInvalid)
+    pb <- progress_estimated(length(when))
+    getCascadeInvalidWithProgress <- function(...){
+      pb$tick()$print()
+      getCascadeInvalid(...)
+    }
+    
+    result=map2(when,result,getCascadeInvalidWithProgress)
   }
   result
 }
