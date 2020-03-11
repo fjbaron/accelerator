@@ -9,7 +9,14 @@
 #'
 #' @examples
 generalDailySummary=function(dfWhatWhen,variablesWhatWhen,functionDailySummary) {
-  dfWhatWhen  %>% pmap( function(what,when,...) generalDailySummaryPhase1(what,when,variablesWhatWhen=variablesWhatWhen,functionDailySummary=functionDailySummary,...))
+  argnames <- sys.call()
+  cat("\nComputing summary: ",unlist(lapply(argnames, as.character)) %>% paste(sep=" ",collapse=" "),"\n")
+  pb <- progress_estimated(nrow(dfWhatWhen))
+  summaryWithProgress <-function(what,when,...) {
+    pb$tick()$print()
+    generalDailySummaryPhase1(what,when,variablesWhatWhen=variablesWhatWhen,functionDailySummary=functionDailySummary,...)
+  }
+  dfWhatWhen  %>% pmap(summaryWithProgress)
 }
 
 
