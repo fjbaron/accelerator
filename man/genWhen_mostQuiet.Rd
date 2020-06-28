@@ -11,6 +11,9 @@ genWhen_mostQuiet(interval, label = "mostQuiet")
 
 \item{label}{}
 }
+\value{
+
+}
 \description{
 Title
 }

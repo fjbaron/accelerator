@@ -11,6 +11,9 @@ whatDifference(intervalSpace, intervalRemove)
 
 \item{intervalRemove}{}
 }
+\value{
+
+}
 \description{
 Title
 }

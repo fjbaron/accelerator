@@ -4,8 +4,12 @@
 \alias{genWhen_bedJB}
 \title{Title}
 \usage{
-genWhen_bedJB(interval, label = "bed", durMin = dminutes(160),
-  durMax = dhours(24))
+genWhen_bedJB(
+  interval,
+  label = "bed",
+  durMin = dminutes(160),
+  durMax = dhours(24)
+)
 }
 \arguments{
 \item{interval}{}
@@ -15,6 +19,9 @@ genWhen_bedJB(interval, label = "bed", durMin = dminutes(160),
 \item{durMin}{}
 
 \item{durMax}{}
+}
+\value{
+
 }
 \description{
 Title

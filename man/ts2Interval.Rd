@@ -11,6 +11,9 @@ ts2Interval(ts, nucleos = numCores(4), ...)
 
 \item{nucleos}{}
 }
+\value{
+
+}
 \description{
 Title
 }

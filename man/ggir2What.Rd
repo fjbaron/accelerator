@@ -9,6 +9,9 @@ ggir2What(df)
 \arguments{
 \item{df}{}
 }
+\value{
+
+}
 \description{
 Title
 }

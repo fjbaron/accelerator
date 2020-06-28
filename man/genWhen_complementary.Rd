@@ -13,6 +13,9 @@ genWhen_complementary(interval, When, label = "complementary")
 
 \item{label}{}
 }
+\value{
+
+}
 \description{
 Title
 }

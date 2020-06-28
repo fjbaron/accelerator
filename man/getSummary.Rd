@@ -4,21 +4,21 @@
 \alias{getSummary}
 \title{Create a summery for the column .criterio of a data frame representing accelerometer data}
 \usage{
-getSummary(df, offset = dhours(0), minimoHorasValidas = 20,
-  maximoHorasNonWear = 2)
+getSummary(
+  df,
+  offset = dhours(0),
+  minimoHorasValidas = 20,
+  maximoHorasNonWear = 2
+)
 
-getSummary(df, offset = dhours(0), minimoHorasValidas = 20,
-  maximoHorasNonWear = 2)
+getSummary(
+  df,
+  offset = dhours(0),
+  minimoHorasValidas = 20,
+  maximoHorasNonWear = 2
+)
 }
 \arguments{
-\item{df}{data frame with columns timestamp and .criterio}
-
-\item{offset}{Will add a quantity to the timestamp to assign the instant of time to the appropiate day}
-
-\item{minimoHorasValidas}{explicar}
-
-\item{maximoHorasNonWear}{explicar}
-
 \item{df}{data frame with columns timestamp, .criterioRaw & .criterioBout}
 
 \item{offset}{Will add a quantity to the timestamp to assign the instant of time to the appropiate day}

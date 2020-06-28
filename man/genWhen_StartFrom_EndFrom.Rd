@@ -4,8 +4,7 @@
 \alias{genWhen_StartFrom_EndFrom}
 \title{Title}
 \usage{
-genWhen_StartFrom_EndFrom(whenFrom, whenTo, label = "when_1_2",
-  offset = 0)
+genWhen_StartFrom_EndFrom(whenFrom, whenTo, label = "when_1_2", offset = 0)
 }
 \arguments{
 \item{whenFrom}{}
@@ -15,6 +14,9 @@ genWhen_StartFrom_EndFrom(whenFrom, whenTo, label = "when_1_2",
 \item{label}{}
 
 \item{offset}{}
+}
+\value{
+
 }
 \description{
 Title

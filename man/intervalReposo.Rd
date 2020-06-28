@@ -4,9 +4,14 @@
 \alias{intervalReposo}
 \title{Obtain the intervals formed by the best candidates every day to be considered as time and sleeping in bed}
 \usage{
-intervalReposo(intervalo1, intervalo2, distance1 = dminutes(40),
-  distance2 = dminutes(5), distance3 = dhours(4),
-  distance4 = dminutes(1))
+intervalReposo(
+  intervalo1,
+  intervalo2,
+  distance1 = dminutes(40),
+  distance2 = dminutes(5),
+  distance3 = dhours(4),
+  distance4 = dminutes(1)
+)
 }
 \arguments{
 \item{distance1}{distance allowed in SIB intervals to consider that the form part of the same sleep period and not different sleeping periods}

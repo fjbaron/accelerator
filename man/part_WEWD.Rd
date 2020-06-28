@@ -9,6 +9,9 @@ part_WEWD(calendars)
 \arguments{
 \item{calendars}{}
 }
+\value{
+
+}
 \description{
 Title
 }

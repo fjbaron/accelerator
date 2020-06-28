@@ -5,8 +5,13 @@
 \title{Dado una lista de bouts, y una lista que contiene funciones de generación de calendarios,
 devuelve lista de calendarios}
 \usage{
-computeValidCalendars(bouts, generateCalendars, labelbed = "bed",
-  progreso = NULL, idBIN = NA_character_)
+computeValidCalendars(
+  bouts,
+  generateCalendars,
+  labelbed = "bed",
+  progreso = NULL,
+  idBIN = NA_character_
+)
 }
 \arguments{
 \item{bouts}{}
@@ -16,6 +21,9 @@ computeValidCalendars(bouts, generateCalendars, labelbed = "bed",
 \item{progreso}{}
 
 \item{listFunctionalCalendars}{}
+}
+\value{
+
 }
 \description{
 Dado una lista de bouts, y una lista que contiene funciones de generación de calendarios,

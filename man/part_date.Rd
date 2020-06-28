@@ -9,6 +9,9 @@ part_date(calendars)
 \arguments{
 \item{calendars}{}
 }
+\value{
+
+}
 \description{
 Title
 }

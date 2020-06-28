@@ -4,8 +4,13 @@
 \alias{enmoBetween}
 \title{Title}
 \usage{
-enmoBetween(df, limInf = 40/1000, limSup = 100/1000, pctBouts = 0.8,
-  durBoutMin = dminutes(1))
+enmoBetween(
+  df,
+  limInf = 40/1000,
+  limSup = 100/1000,
+  pctBouts = 0.8,
+  durBoutMin = dminutes(1)
+)
 }
 \arguments{
 \item{df}{}
@@ -17,6 +22,9 @@ enmoBetween(df, limInf = 40/1000, limSup = 100/1000, pctBouts = 0.8,
 \item{pctBouts}{}
 
 \item{durBoutMin}{}
+}
+\value{
+
 }
 \description{
 Title

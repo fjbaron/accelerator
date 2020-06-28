@@ -13,6 +13,9 @@ doSummary(intervalReference, intervalBout, by = "day")
 
 \item{by}{}
 }
+\value{
+
+}
 \description{
 Title
 }

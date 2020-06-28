@@ -13,6 +13,9 @@ dailyDurationWide(whenList, whatList, ...)
 
 \item{...}{}
 }
+\value{
+
+}
 \description{
 Title
 }

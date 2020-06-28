@@ -4,8 +4,15 @@
 \alias{plotOfIntervals}
 \title{Title}
 \usage{
-plotOfIntervals(df, whatColumn = "what", whenColumn = "when",
-  whenConcept = "daily", what2Color, epochColumnColor, ...)
+plotOfIntervals(
+  df,
+  whatColumn = "what",
+  whenColumn = "when",
+  whenConcept = "daily",
+  what2Color,
+  epochColumnColor,
+  ...
+)
 }
 \arguments{
 \item{df}{}
@@ -21,6 +28,9 @@ plotOfIntervals(df, whatColumn = "what", whenColumn = "when",
 \item{epochColumnColor}{}
 
 \item{...}{}
+}
+\value{
+
 }
 \description{
 Title

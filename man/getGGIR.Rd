@@ -17,6 +17,9 @@ getGGIR(base, RAW, start = NA, end = NA, ...)
 
 \item{...}{}
 }
+\value{
+
+}
 \description{
 Title
 }

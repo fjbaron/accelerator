@@ -11,6 +11,9 @@ genWhen_bedGGIR(intervals, label = "bed")
 
 \item{label}{}
 }
+\value{
+
+}
 \description{
 Title
 }

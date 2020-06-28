@@ -13,6 +13,9 @@ infoGGIRmeta(path, pb = NULL, tz = "Europe/Madrid")
 
 \item{tz}{}
 }
+\value{
+
+}
 \description{
 Title
 }

@@ -1,12 +1,16 @@
 propagateInvalidation=function(when,dfInvalid,cascadeReason,cascadeConsequence){
-  invalidate=when %>% pluck(cascadeConsequence) %>% select(day,label) %>% rename(when=label)
+  invalidate=when %>% pluck(cascadeConsequence) 
+
   result=dfInvalid
-  if(!is.null(invalidate)){}
-  dfInvalid %>% 
+  if(!is.null(invalidate)){
+    invalidate=invalidate %>% select(day,label) %>% rename(when=label)
+  result =dfInvalid %>% 
     filter(when==cascadeReason) %>% select(day,reason) %>%
     left_join(invalidate,by="day") %>%
     filter(!is.na(when)) %>% 
     mutate(reason=str_c(reason,"_",cascadeReason))
+  }
+  result
 }
 
 

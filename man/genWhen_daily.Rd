@@ -4,9 +4,15 @@
 \alias{genWhen_daily}
 \title{Title}
 \usage{
-genWhen_daily(interval, label = "daily", first = TRUE, last = TRUE,
-  offsetLabels = dhours(0), starts = dhours(0), duration = dhours(23)
-  + dminutes(59) + dseconds(59))
+genWhen_daily(
+  interval,
+  label = "daily",
+  first = TRUE,
+  last = TRUE,
+  offsetLabels = dhours(0),
+  starts = dhours(0),
+  duration = dhours(23) + dminutes(59) + dseconds(59)
+)
 }
 \arguments{
 \item{interval}{}
@@ -22,6 +28,9 @@ genWhen_daily(interval, label = "daily", first = TRUE, last = TRUE,
 \item{starts}{}
 
 \item{duration}{}
+}
+\value{
+
 }
 \description{
 Title

@@ -4,8 +4,12 @@
 \alias{summaryListOfBoutsByPartition}
 \title{Title}
 \usage{
-summaryListOfBoutsByPartition(listBouts, listCalendarsAndBouts, partition,
-  label = "partition")
+summaryListOfBoutsByPartition(
+  listBouts,
+  listCalendarsAndBouts,
+  partition,
+  label = "partition"
+)
 }
 \arguments{
 \item{listBouts}{}
@@ -15,6 +19,9 @@ summaryListOfBoutsByPartition(listBouts, listCalendarsAndBouts, partition,
 \item{partition}{}
 
 \item{label}{}
+}
+\value{
+
 }
 \description{
 Title

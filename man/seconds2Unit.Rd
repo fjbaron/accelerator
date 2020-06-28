@@ -9,6 +9,9 @@ seconds2Unit(variable)
 \arguments{
 \item{variable}{}
 }
+\value{
+
+}
 \description{
 Title
 }

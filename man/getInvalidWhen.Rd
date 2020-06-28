@@ -9,6 +9,9 @@ getInvalidWhen(summaryList, when = NULL)
 \arguments{
 \item{summaryList}{}
 }
+\value{
+
+}
 \description{
 Title
 }

@@ -4,8 +4,7 @@
 \alias{genWhen_complementaryInternal}
 \title{Title}
 \usage{
-genWhen_complementaryInternal(interval, When,
-  label = "complementaryInternal")
+genWhen_complementaryInternal(interval, When, label = "complementaryInternal")
 }
 \arguments{
 \item{interval}{}
@@ -13,6 +12,9 @@ genWhen_complementaryInternal(interval, When,
 \item{When}{}
 
 \item{label}{}
+}
+\value{
+
 }
 \description{
 Title

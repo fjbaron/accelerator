@@ -4,8 +4,7 @@
 \alias{criterioSIB}
 \title{Indicates which rows meets the criteria for be considered part of a SIB (Sustained Inactivity Bouts)}
 \usage{
-criterioSIB(df, critAnglez = 5, limSup = 30/1000,
-  durBoutMin = dminutes(5))
+criterioSIB(df, critAnglez = 5, limSup = 30/1000, durBoutMin = dminutes(5))
 }
 \arguments{
 \item{df}{data frame with columns ANGLEZ, ENMO and eventually .criterioNW (that represents NonWear time as TRUE/FALSE)}

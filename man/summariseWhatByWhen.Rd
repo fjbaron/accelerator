@@ -13,6 +13,9 @@ summariseWhatByWhen(When, What, by = "day")
 
 \item{by}{}
 }
+\value{
+
+}
 \description{
 Title
 }

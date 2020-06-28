@@ -11,6 +11,9 @@ genWhen_start2end(interval, label = "start2end")
 
 \item{label}{}
 }
+\value{
+
+}
 \description{
 Title
 }

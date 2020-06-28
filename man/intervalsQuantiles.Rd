@@ -11,6 +11,9 @@ intervalsQuantiles(intervals, probs = c(0.5))
 
 \item{probs}{}
 }
+\value{
+
+}
 \description{
 Title
 }

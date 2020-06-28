@@ -9,6 +9,9 @@ part_SatSun(calendars)
 \arguments{
 \item{calendars}{}
 }
+\value{
+
+}
 \description{
 Title
 }

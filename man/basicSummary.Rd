@@ -4,8 +4,12 @@
 \alias{basicSummary}
 \title{Title}
 \usage{
-basicSummary(listBouts, listCalendarsAndBouts, partition = NULL,
-  label = "partition")
+basicSummary(
+  listBouts,
+  listCalendarsAndBouts,
+  partition = NULL,
+  label = "partition"
+)
 }
 \arguments{
 \item{listBouts}{}
@@ -15,6 +19,9 @@ basicSummary(listBouts, listCalendarsAndBouts, partition = NULL,
 \item{partition}{}
 
 \item{label}{}
+}
+\value{
+
 }
 \description{
 Title

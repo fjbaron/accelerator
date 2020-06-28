@@ -13,10 +13,6 @@ connectOverInterval(interval1, interval2)
 \item{interval1}{first dataframe}
 
 \item{interval2}{second dataframe}
-
-\item{interval1}{first dataframe}
-
-\item{interval2}{second dataframe}
 }
 \value{
 A dataframe of intervals representing the resulting connected intervals

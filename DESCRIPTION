@@ -1,14 +1,14 @@
 Package: accelerator
 Type: Package
 Title: A Tidy Framework For Accelerometry
-Version: 0.3.0
+Version: 0.3.1
 Author: Francisco Javier Baron-Lopez, Julia Wärnberg
 Maintainer: Francisco Javier Baron-Lopez <baron@uma.es>
 Description: A tidy framework for doing accelerometry analysis
 License: GPL 3.0
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 Imports: 
     caTools,
     lubridate,

@@ -4,8 +4,7 @@
 \alias{enmoUnder}
 \title{Title}
 \usage{
-enmoUnder(df, limSup = 40/1000, pctBouts = 1,
-  durBoutMin = dminutes(1))
+enmoUnder(df, limSup = 40/1000, pctBouts = 1, durBoutMin = dminutes(1))
 }
 \arguments{
 \item{df}{}
@@ -15,6 +14,9 @@ enmoUnder(df, limSup = 40/1000, pctBouts = 1,
 \item{pctBouts}{}
 
 \item{durBoutMin}{}
+}
+\value{
+
 }
 \description{
 Title

@@ -4,8 +4,15 @@
 \alias{invalidDuration}
 \title{Title}
 \usage{
-invalidDuration(summary, whatCond, whenCond, minDur = NA, maxDur = NA,
-  whenInvalid = NA_character_, reason = "unexplained")
+invalidDuration(
+  summary,
+  whatCond,
+  whenCond,
+  minDur = NA,
+  maxDur = NA,
+  whenInvalid = NA_character_,
+  reason = "unexplained"
+)
 }
 \arguments{
 \item{summary}{}
@@ -21,6 +28,9 @@ invalidDuration(summary, whatCond, whenCond, minDur = NA, maxDur = NA,
 \item{whenInvalid}{}
 
 \item{reason}{}
+}
+\value{
+
 }
 \description{
 Title

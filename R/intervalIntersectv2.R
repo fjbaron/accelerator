@@ -8,6 +8,7 @@
 #'
 #' @export
 intervalIntersectv2=function(interval1,interval2){
+  if(is.null(interval1)) return(interval2 %>% mutate(fromNew=from,toNew=to,day=Sys.Date()) %>% filter(FALSE))
   interval1=interval1 %>% mutate(.dummyColumn=1)
 
   interval2=interval2 %>% mutate(.fromCut=from,.toCut=to) %>% mutate(.dummyColumn=1) %>% select(.fromCut,.toCut,.dummyColumn,everything(),-from,-to)

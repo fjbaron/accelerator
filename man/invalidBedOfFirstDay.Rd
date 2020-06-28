@@ -4,8 +4,12 @@
 \alias{invalidBedOfFirstDay}
 \title{Title}
 \usage{
-invalidBedOfFirstDay(summary, whatCond = "isOn", whenInvalid = "bed",
-  reason = "1stDayBed")
+invalidBedOfFirstDay(
+  summary,
+  whatCond = "isOn",
+  whenInvalid = "bed",
+  reason = "1stDayBed"
+)
 }
 \arguments{
 \item{summary}{}
@@ -15,6 +19,9 @@ invalidBedOfFirstDay(summary, whatCond = "isOn", whenInvalid = "bed",
 \item{whenInvalid}{}
 
 \item{reason}{}
+}
+\value{
+
 }
 \description{
 Title

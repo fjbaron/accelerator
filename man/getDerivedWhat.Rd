@@ -9,6 +9,9 @@ getDerivedWhat(df)
 \arguments{
 \item{df}{}
 }
+\value{
+
+}
 \description{
 Title
 }

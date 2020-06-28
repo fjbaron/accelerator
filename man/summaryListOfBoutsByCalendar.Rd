@@ -11,6 +11,9 @@ summaryListOfBoutsByCalendar(listBouts, listCalendarsAndBouts)
 
 \item{listCalendarsAndBouts}{}
 }
+\value{
+
+}
 \description{
 Title
 }

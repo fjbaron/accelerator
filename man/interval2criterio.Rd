@@ -8,10 +8,6 @@ a boolean vector representing if that epoch belong to one of the intervals}
 interval2criterio(ts, intervalos)
 }
 \arguments{
-\item{ts}{vector of timestamps}
-
-\item{intervalos}{dataframe of intervals, with columns \code{to} and \code {from}}
-
 \item{ts}{}
 
 \item{intervalos}{}

@@ -13,6 +13,9 @@ genWhen_awake(interval, bed, label = "awake")
 
 \item{label}{}
 }
+\value{
+
+}
 \description{
 Title
 }

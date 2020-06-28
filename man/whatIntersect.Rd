@@ -11,6 +11,9 @@ whatIntersect(what1, what2)
 
 \item{what2}{}
 }
+\value{
+
+}
 \description{
 Title
 }

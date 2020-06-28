@@ -4,8 +4,13 @@
 \alias{criterio2Interval}
 \title{Convert a data frame with a column called .criterio to a data frame of intervals of bouts of that criteria}
 \usage{
-criterio2Interval(df, pctBouts = 1, durBoutMin = dseconds(5),
-  durEpoch = dseconds(5), units = "mins")
+criterio2Interval(
+  df,
+  pctBouts = 1,
+  durBoutMin = dseconds(5),
+  durEpoch = dseconds(5),
+  units = "mins"
+)
 }
 \arguments{
 \item{df}{data frame with columns .criterio}

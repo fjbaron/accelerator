@@ -13,6 +13,9 @@ generalDailySummary(dfWhatWhen, variablesWhatWhen, functionDailySummary)
 
 \item{functionDailySummary}{}
 }
+\value{
+
+}
 \description{
 Title
 }

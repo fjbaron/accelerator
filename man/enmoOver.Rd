@@ -4,8 +4,7 @@
 \alias{enmoOver}
 \title{Title}
 \usage{
-enmoOver(df, limInf = 100/1000, pctBouts = 0.8,
-  durBoutMin = dminutes(1))
+enmoOver(df, limInf = 100/1000, pctBouts = 0.8, durBoutMin = dminutes(1))
 }
 \arguments{
 \item{df}{}
@@ -15,6 +14,9 @@ enmoOver(df, limInf = 100/1000, pctBouts = 0.8,
 \item{pctBouts}{}
 
 \item{durBoutMin}{}
+}
+\value{
+
 }
 \description{
 Title
