@@ -51,7 +51,7 @@ plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="dai
     ggiraph::geom_segment_interactive(aes(xend=to_b,yend=order,color=what,tooltip=data_id,data_id = data_id),size=size)+
     scale_x_datetime(labels=date_format("%H",tz=zona),date_minor_breaks="30 mins",date_breaks="1 hours",position = "top")+
     #,limits=c(desdeGrafico,hastaGrafico)
-    theme_stata() +
+#    theme_stata() +
     scale_y_continuous(breaks=NULL)+
     xlab("Hora")+
     scale_color_manual(values=miPaleta)+
