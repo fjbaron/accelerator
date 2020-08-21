@@ -1,7 +1,7 @@
 Package: accelerator
 Type: Package
 Title: A Tidy Framework For Accelerometry
-Version: 0.3.1
+Version: 0.3.2
 Author: Francisco Javier Baron-Lopez, Julia Wärnberg
 Maintainer: Francisco Javier Baron-Lopez <baron@uma.es>
 Description: A tidy framework for doing accelerometry analysis
@@ -14,4 +14,5 @@ Imports:
     lubridate,
     parallel,
     purrr,
-    tidyverse
+    tidyverse,
+    ggiraph
