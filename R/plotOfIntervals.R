@@ -12,7 +12,7 @@
 #' @export
 #'
 #' @examples
-plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="daily",what2Color,epochColumnColor,...){
+plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="daily",what2Color,epochColumnColor,size=1,...){
   dfInt=df %>% select(RAW,what,when) %>% 
     ###      mutate(what=map(what,~list2df(.x,label="what")),
     mutate (what= map2(what,when, ~ {.x  %>% list2df(label="what") %>% select(what,from,to) %>% intervalIntersectv2(.y %>% pluck(whenConcept)) %>% select(-from,-to) %>% rename(from=fromNew,to=toNew)} )) %>%
@@ -20,7 +20,8 @@ plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="dai
     unnest(cols=c(what)) %>%
     mutate(NUM=as.integer(as.factor(RAW))) %>%
     mutate(order= map2_dbl(.[["what"]],.[["NUM"]], ~ (what2Color %>% pluck(.x,"order")+10*.y))) %>%
-    mutate(color= map_chr(.[["what"]],   ~ what2Color %>% pluck(.x,"color")) )
+    mutate(color= map_chr(.[["what"]],   ~ what2Color %>% pluck(.x,"color")) ) %>%
+    mutate(zindex= map_dbl(.[["what"]],   ~ {zindex=what2Color %>% pluck(.x,"zindex") %>% as.numeric(); ifelse(length(zindex)==1,zindex,1)}) )
   
   when=df %>% pluck("when") %>% map_df(~ .[[whenConcept]]) %>% group_by(day,label) %>%
     summarise(from=min(from),to=max(to)) %>% ungroup()
@@ -39,7 +40,7 @@ plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="dai
       to_b= to-(day-primero),
       dia= str_c(str_sub(as.character(as_date(day)),3,10),"\n",weekdays(day,abbreviate=TRUE)),
       data_id=str_c(what,";",from,";",to,";",RAW))   %>%
-    arrange(what,from_b)
+    arrange(zindex,what,from_b)
   
   #print(dfIntDias)
   
@@ -47,7 +48,7 @@ plotOfIntervals=function(df,whatColumn="what",whenColumn="when",whenConcept="dai
   miPaleta=miPaleta1$color %>% set_names(miPaleta1$what)
   
   grafico=ggplot(dfIntDias,aes(x=from_b,y=order))+
-    geom_segment_interactive(aes(xend=to_b,yend=order,color=what,tooltip=data_id,data_id = data_id),size=1)+
+    geom_segment_interactive(aes(xend=to_b,yend=order,color=what,tooltip=data_id,data_id = data_id),size=size)+
     scale_x_datetime(labels=date_format("%H",tz=zona),date_minor_breaks="30 mins",date_breaks="1 hours",position = "top")+
     #,limits=c(desdeGrafico,hastaGrafico)
     theme_stata() +
