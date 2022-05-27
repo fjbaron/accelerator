@@ -2,8 +2,7 @@
 % Please edit documentation in R/interval2criterio.R
 \name{interval2criterio}
 \alias{interval2criterio}
-\title{Convert a dataframe of intervals, given a vector of timestamps representing epochs to
-a boolean vector representing if that epoch belong to one of the intervals}
+\title{Title}
 \usage{
 interval2criterio(ts, intervalos)
 }
@@ -13,9 +12,8 @@ interval2criterio(ts, intervalos)
 \item{intervalos}{}
 }
 \value{
-a logical vector of length(ts) indicating if that time velong to a interval
+
 }
 \description{
-Convert a dataframe of intervals, given a vector of timestamps representing epochs to
-a boolean vector representing if that epoch belong to one of the intervals
+Title
 }

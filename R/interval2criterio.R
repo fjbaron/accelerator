@@ -1,16 +1,13 @@
-#' Convert a dataframe of intervals, given a vector of timestamps representing epochs to
-#' a boolean vector representing if that epoch belong to one of the intervals
+#' Title
 #'
-#' @param ts vector of timestamps
-#' @param intervalos dataframe of intervals, with columns \code{to} and \code {from}
 #' @param ts 
-#'
 #' @param intervalos 
 #'
-#' @return a logical vector of length(ts) indicating if that time velong to a interval
-#'
+#' @return
 #' @export
-interval2criterio=function(ts,intervalos){
+#'
+#' @examples
+ interval2criterio=function(ts,intervalos){
   #ts=df$timestamp
   #intervalos=intervalosNW
   durEpoch=as.duration(ts[2]-ts[1])

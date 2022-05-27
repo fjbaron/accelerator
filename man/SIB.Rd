@@ -5,7 +5,7 @@
 \title{Summarises Sustained Inactivity Bouts (SIB) according to the criteria by Vincent van Hees
 Critera: Identify 5-min-bouts with < 5 degrees change in angle.}
 \usage{
-SIB(df, ...)
+SIB(df, critAnglez = 5, durBoutMin = dminutes(5), ...)
 }
 \arguments{
 \item{df}{Dataframe of epochs with two columns: datetime and XXXXXX.}

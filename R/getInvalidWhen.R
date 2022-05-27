@@ -43,10 +43,12 @@ getCascadeInvalid=function(when,dfInvalid){
 getInvalidWhen=function(summaryList,when=NULL){
   cat("\n Computing invalid `WHEN` directly\n")
   
-  pb <- progress_estimated(length(summaryList))
+  #pb <- progress_estimated(length(summaryList))
+  pb <- progress::progress_bar$new(format = "[:bar] :current/:total (:percent) :eta", total = length(summaryList))
   
   getInvalidWhenWithProgress <- function(...){
-    pb$tick()$print()
+    #pb$tick()$print()
+    pb$tick()
     currentProject$whenValidity$directInvalidation(...)
   }
   
@@ -58,9 +60,11 @@ getInvalidWhen=function(summaryList,when=NULL){
   if(!is.null(when) & 
      !is.null(currentProject$whenValidity$cascadeInvalid) &
      length(currentProject$whenValidity$cascadeInvalid)>0){
-    pb <- progress_estimated(length(when))
+    #pb <- progress_estimated(length(when))
+    pb <- progress::progress_bar$new(format = "[:bar] :current/:total (:percent) :eta", total = length(when))
     getCascadeInvalidWithProgress <- function(...){
-      pb$tick()$print()
+      #pb$tick()$print()
+      pb$tick()
       getCascadeInvalid(...)
     }
     

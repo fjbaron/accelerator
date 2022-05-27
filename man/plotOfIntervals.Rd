@@ -11,6 +11,7 @@ plotOfIntervals(
   whenConcept = "daily",
   what2Color,
   epochColumnColor,
+  size = 1,
   ...
 )
 }

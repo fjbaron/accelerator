@@ -301,7 +301,7 @@ OINA_B30=function(df,limSup=40/1000,...) {
 
 
 
-SIB=function(df,...) {
+SIB=function(df,critAnglez = 5, durBoutMin = dminutes(5),...) {
   #' Summarises Sustained Inactivity Bouts (SIB) according to the criteria by Vincent van Hees
   #' Critera: Identify 5-min-bouts with < 5 degrees change in angle.
   #' @param df Dataframe of epochs with two columns: datetime and XXXXXX.
@@ -309,9 +309,29 @@ SIB=function(df,...) {
   #' @export
   #'
   df %>%
-    mutate(.criterioRaw=criterioSIB(.),.criterioBout=.criterioRaw) %>%
+    mutate(.criterioRaw=criterioSIB(.,critAnglez =critAnglez, durBoutMin = durBoutMin),.criterioBout=.criterioRaw) %>%
     getSummary(offset=dhours(2))
 }
+
+
+
+ZIB=function(df,critAnglez = 5, durBoutMin = dminutes(5),...) {
+  #' Title
+  #'
+  #' @param df 
+  #' @param critAnglez 
+  #' @param durBoutMin 
+  #' @param ... 
+  #'
+  #' @return
+  #' @export
+  #'
+  #' @examples  
+  df %>%
+    mutate(.criterioRaw=criterioZIB(.,critAnglez =critAnglez, durBoutMin = durBoutMin),.criterioBout=.criterioRaw) %>%
+    getSummary(offset=dhours(2))
+}
+
 
 
 

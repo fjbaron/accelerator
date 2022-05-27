@@ -58,10 +58,25 @@ getGGIR=function(base,RAW,start=NA,end=NA,...){
     else {
       try({
         load(path_part5)
-        dfGGIR= output %>% transmute(from=fechaHora2datetime(calendardate,acc_onset),
-                                     to=fechaHora2datetime(calendardate,acc_wake),
-                                     day=as.Date(ymd(calendardate)),label="bedGGIR") %>%
-          as_tibble() %>% filter(complete.cases(.)) 
+        
+
+        if ("calendardate" %in% names(output)){
+          #Es el formato viejo
+          dfGGIR= output %>% transmute(from=fechaHora2datetime(calendardate,acc_onset),
+                                       to=fechaHora2datetime(calendardate,acc_wake),
+                                       day=as.Date(ymd(calendardate)),
+                                       label="GGIR") %>%
+            as_tibble() %>% filter(complete.cases(.)) 
+        } else {
+          #Es el formato nuevo
+          dfGGIR= output %>% transmute(from=fechaHora2datetime(calendar_date,sleeponset),
+                                       to=fechaHora2datetime(calendar_date,wakeup),
+                                       day=as.Date(ymd(calendar_date)),
+                                       label="GGIR") %>%
+            as_tibble() %>% filter(complete.cases(.)) 
+        }
+
+        
         df=df %>% mutate(.criteriocamaGGIR=as.logical(interval2criterio(df$timestamp,dfGGIR)))
       })
     }

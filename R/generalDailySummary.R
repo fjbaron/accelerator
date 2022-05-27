@@ -11,9 +11,11 @@
 generalDailySummary=function(dfWhatWhen,variablesWhatWhen,functionDailySummary) {
   argnames <- sys.call()
   cat("\nComputing summary: ",unlist(lapply(argnames, as.character)) %>% paste(sep=" ",collapse=" "),"\n")
-  pb <- progress_estimated(nrow(dfWhatWhen))
+#  pb <- progress_estimated(nrow(dfWhatWhen))
+  pb <- progress::progress_bar$new(format = "[:bar] :current/:total (:percent) :eta", total = nrow(dfWhatWhen))
   summaryWithProgress <-function(what,when,...) {
-    pb$tick()$print()
+    #pb$tick()$print()
+    pb$tick()
     generalDailySummaryPhase1(what,when,variablesWhatWhen=variablesWhatWhen,functionDailySummary=functionDailySummary,...)
   }
   dfWhatWhen  %>% pmap(summaryWithProgress)

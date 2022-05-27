@@ -18,8 +18,10 @@ dailyDuration=function(whenList,whatList,...){
   }) %>% 
     transmute(day=day,from=fromNew,to=toNew,what=what) %>% group_by(day,what) %>%
     summarise(duration=sum(as.integer(difftime(to,from,units="secs"))),.groups = 'drop') %>%
-    ungroup() %>% arrange(what,day)
+    ungroup() %>% arrange(what,day)  
+
   
-  resultadoEsperado %>% left_join(duraciones, by = c("day", "what")) %>% mutate(duration=ifelse(is.na(duration),0,duration))
+  resultadoEsperado %>% left_join(duraciones, by = c("day", "what")) %>% 
+    mutate(duration=ifelse(is.na(duration),0,duration)) 
 }
 
