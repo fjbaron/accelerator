@@ -61,15 +61,15 @@ getInvalidWhen=function(summaryList,when=NULL){
   if(!is.null(when) & 
      !is.null(currentProject$whenValidity$cascadeInvalid) &
      length(currentProject$whenValidity$cascadeInvalid)>0){
-    #pb <- progress_estimated(length(when))
-    pb <- progress::progress_bar$new(format = "[:bar] :current/:total (:percent) :eta", total = length(when))
-    getCascadeInvalidWithProgress <- function(...){
-      #pb$tick()$print()
-      pb$tick()
-      getCascadeInvalid(...)
-    }
+#    pb <- progress::progress_bar$new(format = "[:bar] :current/:total (:percent) :eta", total = length(when))
+#    getCascadeInvalidWithProgress <- function(...){
+#      #pb$tick()$print()
+#     pb$tick()
+#      getCascadeInvalid(...)
+#    }
     
-    result=map2(when,result,getCascadeInvalidWithProgress)
+#    result=map2(when,result,getCascadeInvalidWithProgress)
+    result=map2(when,result,getCascadeInvalid)
   }
   result
 }
