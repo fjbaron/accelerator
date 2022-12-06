@@ -25,7 +25,8 @@ getCascadeInvalid=function(when,dfInvalid){
   repeat {
     resultado=dfInvalid %>% bind_rows(invalidaEnCascada(when,dfInvalid,currentProject$whenValidity$cascadeInvalid))
     new_state=resultado %>% distinct(day,when)
-    if(isTRUE(all.equal(new_state,state_old))) break
+#    if(isTRUE(all.equal(new_state,state_old))) break
+    if(isTRUE(all_equal(new_state,state_old))) break
     state_old=new_state
   }
   resultado
