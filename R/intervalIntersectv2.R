@@ -18,6 +18,7 @@ intervalIntersectv2=function(interval1,interval2){
     mutate(solapan=as.integer(as.period(lubridate::intersect(interval(from,to),interval(.fromCut,.toCut)),"seconds"))) %>%
     filter(!is.na(solapan)) %>% as_tibble() %>%
     mutate(fromNew=pmax(from,.fromCut),toNew=pmin(to,.toCut)) %>%
-    select(from,to,fromNew,toNew,everything(),-.dummyColumn, -.fromCut, -.toCut,-solapan,)
+    select(from,to,fromNew,toNew,everything(),-.dummyColumn, -.fromCut, -.toCut,-solapan,) %>% 
+    filter(fromNew<toNew)
   resultado
 }
