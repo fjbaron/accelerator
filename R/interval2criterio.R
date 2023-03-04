@@ -19,7 +19,8 @@
     iDesde = min(difftime(intervalos[["from"]][i],ts[1])/durEpoch,length(ts)-1)
     iHasta = min(difftime(intervalos[["to"]][i],ts[1])/durEpoch,length(ts)-1)
 #    message(iDesde, " ",iHasta,"\n")
-    if(iDesde<=iHasta) criterio[1+iDesde:iHasta]=1
+#    if(iDesde<=iHasta) criterio[1+iDesde:iHasta]=1 #Anterior a 28/02/2023
+    if(iDesde<iHasta+1) criterio[1+(iDesde+1):iHasta]=1
   }
 
   criterio
