@@ -66,7 +66,7 @@ criterio2Interval=function(df,pctBouts=1,durBoutMin=dseconds(5),durEpoch=dsecond
 #Revisar
 data.frame(from=result_from) %>% 
   mutate(to=result_to[1:length(result_from)]) %>%
-  mutate(from=from-dseconds(5)) %>% ##REVISAR SI ES ASI 27/02/2023
+  mutate(from=from-durEpoch) %>% ##REVISAR SI ES ASI 27/02/2023
 #  filter(from<to) %>% as_tibble() %>% 
   filter(from+durBoutMin<=to)   #Esto no estaba antes y parece necesario 28/02/2023 
 #data.frame(from=result_from,to=result_to) %>%as_tibble()
