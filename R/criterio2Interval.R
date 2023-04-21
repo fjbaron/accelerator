@@ -11,11 +11,11 @@
 #'
 #' @export
 
-criterio2Interval=function(df,pctBouts=1,durBoutMin=dseconds(5),durEpoch=dseconds(5),units="mins"){
+criterio2Interval=function(df,pctBouts=1,durBoutMin=dseconds(5),units="mins"){
+  durEpoch=as.duration(df$timestamp[2]-df$timestamp[1])
   #df needs to have two columns "timestamp" & .criterioBout
   #Ejemplo: df %>% mutate(.criterio=criterioENMO(.,limInf = 10/100)) %>% criterio2Interval() %>% .$intervals
   windowSize=durBoutMin/durEpoch
-
 
   resultado=list(intervals=NULL,numIntervals=NA,totalTime=NA,propTime=NA,dailyTime=NA,numberOfDays=NA)
 

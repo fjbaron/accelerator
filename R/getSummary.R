@@ -33,5 +33,9 @@ getSummary=function(df,offset=dhours(0),minimoHorasValidas=20,maximoHorasNonWear
   totalValidHours=validDays  %>%  .[["HorasWear"]] %>% sum(na.rm=T)
   average=validDays %>% .[["Suma"]] %>% mean(na.rm=T)
   weightedaverage=validDays %>% mutate(Contribution=Suma*HorasWear) %>% .[["Contribution"]] %>% sum(na.rm=T)/totalValidHours
-  list(dailyTable=dailyTable, average=as.numeric(average),weightedaverage=as.numeric(weightedaverage),totalValidHours=totalValidHours,intervals=df %>% criterio2Interval())
+  list(dailyTable=dailyTable, 
+       average=as.numeric(average),
+       weightedaverage=as.numeric(weightedaverage),
+       totalValidHours=totalValidHours,
+       intervals=df %>% criterio2Interval(durBoutMin = durBoutMin))
 }

@@ -12,5 +12,5 @@ enmoBetween=function(df,limInf=40/1000,limSup=100/1000,pctBouts=0.8,durBoutMin=d
   df %>%
        mutate(.criterioRaw=criterioENMO (.,limInf=limInf,limSup=limSup)) %>%
        mutate(.criterioBout=criterioBout(.,pctBouts = pctBouts,durBoutMin = durBoutMin)) %>%
-       getSummary()
+       getSummary(durBoutMin=durBoutMin)
   }
