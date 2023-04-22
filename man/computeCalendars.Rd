@@ -19,9 +19,6 @@ computeCalendars(
 
 \item{listFunctionalCalendars}{}
 }
-\value{
-
-}
 \description{
 Dado una lista de bouts, y una lista que contiene funciones de generación de calendarios,
 devuelve lista de calendarios

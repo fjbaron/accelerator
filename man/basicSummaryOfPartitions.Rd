@@ -20,9 +20,6 @@ basicSummaryOfPartitions(
 
 \item{label}{}
 }
-\value{
-
-}
 \description{
 Title
 }

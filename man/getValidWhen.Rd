@@ -11,9 +11,6 @@ getValidWhen(when, invalidWhen)
 
 \item{invalidWhen}{}
 }
-\value{
-
-}
 \description{
 Title
 }

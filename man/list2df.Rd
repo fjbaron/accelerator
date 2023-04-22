@@ -11,9 +11,6 @@ list2df(lista, label = "")
 
 \item{label}{}
 }
-\value{
-
-}
 \description{
 Convert a recursive list of dataframes to one dataframe.
 }

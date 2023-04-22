@@ -9,9 +9,6 @@ part_weekday(calendars)
 \arguments{
 \item{calendars}{}
 }
-\value{
-
-}
 \description{
 Title
 }

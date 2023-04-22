@@ -13,9 +13,6 @@ getInfoOfFiles(dir, prefix = "", suffix = "\\\\.RData$")
 
 \item{suffix}{}
 }
-\value{
-
-}
 \description{
 Title
 }

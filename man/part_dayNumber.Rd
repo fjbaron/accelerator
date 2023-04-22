@@ -9,9 +9,6 @@ part_dayNumber(calendars, referenceDay = NA)
 \arguments{
 \item{calendars}{}
 }
-\value{
-
-}
 \description{
 Title
 }

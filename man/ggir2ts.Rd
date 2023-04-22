@@ -17,9 +17,6 @@ ggir2ts(base, RAW, start = NA, end = NA, progreso = NULL)
 
 \item{progreso}{}
 }
-\value{
-
-}
 \description{
 Title
 }

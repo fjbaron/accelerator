@@ -15,12 +15,6 @@ ZIB(df, critAnglez = 5, durBoutMin = dminutes(5), ...)
 
 \item{...}{}
 }
-\value{
-
-}
 \description{
 Title
-}
-\examples{
- 
 }

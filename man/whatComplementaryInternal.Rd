@@ -9,9 +9,6 @@ whatComplementaryInternal(whatInterval)
 \arguments{
 \item{whatInterval}{}
 }
-\value{
-
-}
 \description{
 Title
 }

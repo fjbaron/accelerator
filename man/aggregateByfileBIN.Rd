@@ -13,9 +13,6 @@ aggregateByfileBIN(dfDiario, aggregateCalendar2BIN, partition = NULL)
 
 \item{partition}{}
 }
-\value{
-
-}
 \description{
 Title
 }

@@ -23,9 +23,6 @@ enmoBetween(
 
 \item{durBoutMin}{}
 }
-\value{
-
-}
 \description{
 Title
 }

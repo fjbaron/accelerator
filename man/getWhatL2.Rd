@@ -11,9 +11,6 @@ getWhatL2(df, what = "what")
 
 \item{what}{}
 }
-\value{
-
-}
 \description{
 Title
 }

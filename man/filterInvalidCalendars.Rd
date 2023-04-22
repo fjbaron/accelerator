@@ -14,9 +14,6 @@ filterInvalidCalendars(calendars, bouts, labelbed = "bed")
 
 \item{labelbed}{}
 }
-\value{
-
-}
 \description{
 Dado una lista de bouts y un calendario devuelve una lsista de calendarios donde se cumplen las reglas de
  validez. Por tanto lo que obtenemos es un alista de calendarios más limitada.

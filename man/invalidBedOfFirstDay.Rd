@@ -20,9 +20,6 @@ invalidBedOfFirstDay(
 
 \item{reason}{}
 }
-\value{
-
-}
 \description{
 Title
 }

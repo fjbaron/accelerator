@@ -29,9 +29,6 @@ genWhen_daily(
 
 \item{duration}{}
 }
-\value{
-
-}
 \description{
 Title
 }

@@ -20,9 +20,6 @@ summaryListOfBoutsByPartition(
 
 \item{label}{}
 }
-\value{
-
-}
 \description{
 Title
 }

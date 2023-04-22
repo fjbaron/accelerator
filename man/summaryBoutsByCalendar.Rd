@@ -14,9 +14,6 @@ summaryBoutsByCalendar(bouts, calendars, listCalendarsAndBouts)
 
 \item{listCalendarsAndBouts}{}
 }
-\value{
-
-}
 \description{
 Dado una lista de bouts, calendarios y otra lista de que bouts queremos medir para cada calendario
 nos devuelve un dataframe con un resumen de las variables de interés (bouts) medidas en sus respectivos calendarios

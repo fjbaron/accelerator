@@ -15,9 +15,6 @@ ts2IntervalV2(ts, currentProject, nucleos = numCores(4), ...)
 
 \item{...}{}
 }
-\value{
-
-}
 \description{
 Title
 }

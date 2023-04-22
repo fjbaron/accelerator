@@ -29,9 +29,6 @@ genWhen_24h(
 
 \item{duration}{}
 }
-\value{
-
-}
 \description{
 Title
 }

@@ -15,9 +15,6 @@ dailyQuantile(whenList, whatList, q = 0.5, ...)
 
 \item{...}{}
 }
-\value{
-
-}
 \description{
 Title
 }

@@ -23,9 +23,6 @@ summaryBoutsByPartition(
 
 \item{label}{}
 }
-\value{
-
-}
 \description{
 Title
 }

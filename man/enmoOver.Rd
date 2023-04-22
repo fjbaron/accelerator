@@ -15,9 +15,6 @@ enmoOver(df, limInf = 100/1000, pctBouts = 0.8, durBoutMin = dminutes(1))
 
 \item{durBoutMin}{}
 }
-\value{
-
-}
 \description{
 Title
 }

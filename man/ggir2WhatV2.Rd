@@ -11,9 +11,6 @@ ggir2WhatV2(df, currentProject)
 
 \item{currentProject}{}
 }
-\value{
-
-}
 \description{
 Title
 }

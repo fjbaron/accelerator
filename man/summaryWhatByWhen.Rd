@@ -11,9 +11,6 @@ summaryWhatByWhen(what, when)
 
 \item{when}{}
 }
-\value{
-
-}
 \description{
 Title
 }

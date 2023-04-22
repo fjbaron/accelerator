@@ -10,6 +10,8 @@ invalidDuration(
   whenCond,
   minDur = NA,
   maxDur = NA,
+  notIn = NA,
+  minRelative = NA,
   whenInvalid = NA_character_,
   reason = "unexplained"
 )
@@ -25,12 +27,11 @@ invalidDuration(
 
 \item{maxDur}{}
 
+\item{notIn}{}
+
 \item{whenInvalid}{}
 
 \item{reason}{}
-}
-\value{
-
 }
 \description{
 Title

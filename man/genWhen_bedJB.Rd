@@ -20,9 +20,6 @@ genWhen_bedJB(
 
 \item{durMax}{}
 }
-\value{
-
-}
 \description{
 Title
 }

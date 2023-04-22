@@ -11,9 +11,6 @@ fechaHora2datetime(calendardate, hora)
 
 \item{hora}{}
 }
-\value{
-
-}
 \description{
 Title
 }

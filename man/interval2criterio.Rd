@@ -11,9 +11,6 @@ interval2criterio(ts, intervalos)
 
 \item{intervalos}{}
 }
-\value{
-
-}
 \description{
 Title
 }

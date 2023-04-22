@@ -1,17 +1,16 @@
-#' Create a summery for the column .criterioRaw and .criterioBout of a data frame representing accelerometer data
+#' Title
 #'
-#' Generates a summary for a epoch or BIN file
+#' @param df 
+#' @param offset 
+#' @param minimoHorasValidas 
+#' @param maximoHorasNonWear 
+#' @param durBoutMin 
 #'
-#'
-#' @param df data frame with columns timestamp, .criterioRaw & .criterioBout
-#' @param offset Will add a quantity to the timestamp to assign the instant of time to the appropiate day
-#' @param minimoHorasValidas explicar
-#' @param maximoHorasNonWear explicar
-#'
-#' @return a list with a summary. This is the info that we use to define activity variables on a daily basis and on a global value.
-#'
+#' @return
 #' @export
-getSummary=function(df,offset=dhours(0),minimoHorasValidas=20,maximoHorasNonWear=2){
+#'
+#' @examples
+getSummary=function(df,offset=dhours(0),minimoHorasValidas=20,maximoHorasNonWear=2,durBoutMin=dseconds(5)){
   firstDay=lubridate::as_date(df[["timestamp"]][1])
   df= df %>%
     mutate(

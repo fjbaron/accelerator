@@ -9,9 +9,6 @@ epoch2Bouts(dfTareas)
 \arguments{
 \item{dfTareas}{}
 }
-\value{
-
-}
 \description{
 Genera una lista de todos los bouts para un dataframe con los nodos y ficheros para los que tenemos los epochs ya calculados
 }

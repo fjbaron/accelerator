@@ -23,9 +23,6 @@ genWhatL2_AinterruptedByB(
 
 \item{durBoutMin}{}
 }
-\value{
-
-}
 \description{
 Title
 }

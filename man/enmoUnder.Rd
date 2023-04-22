@@ -15,9 +15,6 @@ enmoUnder(df, limSup = 40/1000, pctBouts = 1, durBoutMin = dminutes(1))
 
 \item{durBoutMin}{}
 }
-\value{
-
-}
 \description{
 Title
 }

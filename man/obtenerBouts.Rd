@@ -20,9 +20,6 @@ obtenerBouts(
 
 \item{nucleos}{}
 }
-\value{
-
-}
 \description{
 Title
 }

@@ -11,9 +11,6 @@ getWhen(df, what = "what")
 
 \item{what}{}
 }
-\value{
-
-}
 \description{
 Title
 }

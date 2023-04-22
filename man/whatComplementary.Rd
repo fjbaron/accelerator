@@ -11,9 +11,6 @@ whatComplementary(whatInterval, intervalSpace)
 
 \item{intervalSpace}{}
 }
-\value{
-
-}
 \description{
 Title
 }

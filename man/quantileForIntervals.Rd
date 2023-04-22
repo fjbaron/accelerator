@@ -13,9 +13,6 @@ quantileForIntervals(df, q = 0.5, ...)
 
 \item{...}{}
 }
-\value{
-
-}
 \description{
 Title
 }

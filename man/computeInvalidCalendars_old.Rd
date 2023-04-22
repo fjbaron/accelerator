@@ -14,9 +14,6 @@ computeInvalidCalendars_old(calendars, bouts, labelbed = "bed")
 
 \item{labelbed}{}
 }
-\value{
-
-}
 \description{
 Calcula un dataframe con los calendarios que no son válidos. Depende de una lista de bouts de entrada y de calendarios. 
 Si alguno hace el papel de contener la información de cual es la cama del día, hay que indicar su nombre

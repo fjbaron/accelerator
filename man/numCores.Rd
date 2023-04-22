@@ -9,9 +9,6 @@ numCores(nCores)
 \arguments{
 \item{nCores}{}
 }
-\value{
-
-}
 \description{
 Title
 }

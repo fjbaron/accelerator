@@ -13,9 +13,6 @@ genWhen_complementaryInternal(interval, When, label = "complementaryInternal")
 
 \item{label}{}
 }
-\value{
-
-}
 \description{
 Title
 }

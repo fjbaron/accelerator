@@ -18,9 +18,6 @@ basicSummaryOfBouts(
 
 \item{progreso}{}
 }
-\value{
-
-}
 \description{
 Title
 }

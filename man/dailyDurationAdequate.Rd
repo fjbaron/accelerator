@@ -4,7 +4,15 @@
 \alias{dailyDurationAdequate}
 \title{Title}
 \usage{
-dailyDurationAdequate(whenList, whatList, durMin = NA, durMax = NA, ...)
+dailyDurationAdequate(
+  whenList,
+  whatList,
+  durMin = NA,
+  durMax = NA,
+  durRelMin = NA,
+  durRelMax = NA,
+  ...
+)
 }
 \arguments{
 \item{whenList}{}
@@ -15,10 +23,11 @@ dailyDurationAdequate(whenList, whatList, durMin = NA, durMax = NA, ...)
 
 \item{durMax}{}
 
-\item{...}{}
-}
-\value{
+\item{durRelMin}{}
 
+\item{durRelMax}{}
+
+\item{...}{}
 }
 \description{
 Title

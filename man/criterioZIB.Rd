@@ -15,9 +15,6 @@ criterioZIB(df, critAnglez = 5, limSup = 30/1000, durBoutMin = dminutes(5))
 
 \item{durBoutMin}{}
 }
-\value{
-
-}
 \description{
 Title
 }

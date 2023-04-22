@@ -4,24 +4,18 @@
 \alias{criterio2Interval}
 \title{Convert a data frame with a column called .criterio to a data frame of intervals of bouts of that criteria}
 \usage{
-criterio2Interval(
-  df,
-  pctBouts = 1,
-  durBoutMin = dseconds(5),
-  durEpoch = dseconds(5),
-  units = "mins"
-)
+criterio2Interval(df, pctBouts = 1, durBoutMin = dseconds(5), units = "mins")
 }
 \arguments{
 \item{df}{data frame with columns .criterio}
 
 \item{durBoutMin}{minimum amount of time that the condition muest be met to be aconsidered a Bout}
 
-\item{durEpoch}{amount of time that represents each row of the dataframe (duration of a epoch usually)}
-
 \item{units}{Units of time to show certain summaries. Une of c("secs","mins","hours","days")}
 
 \item{pctBout}{represents fraction of time that the .criterio must be TRUE}
+
+\item{durEpoch}{amount of time that represents each row of the dataframe (duration of a epoch usually)}
 }
 \value{
 a list with data frame of intervals and certain summaries.

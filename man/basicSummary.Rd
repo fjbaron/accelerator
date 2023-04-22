@@ -20,9 +20,6 @@ basicSummary(
 
 \item{label}{}
 }
-\value{
-
-}
 \description{
 Title
 }

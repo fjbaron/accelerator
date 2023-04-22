@@ -11,9 +11,6 @@ df2list(df, label)
 
 \item{label}{}
 }
-\value{
-
-}
 \description{
 convert a dataframe to a list of dataframes
 }

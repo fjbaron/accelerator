@@ -15,9 +15,6 @@ genWhen_StartTo_EndFrom(whenFrom, whenTo, label = "when_1_2", offset = 0)
 
 \item{offset}{}
 }
-\value{
-
-}
 \description{
 Title
 }

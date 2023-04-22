@@ -8,32 +8,32 @@ getSummary(
   df,
   offset = dhours(0),
   minimoHorasValidas = 20,
-  maximoHorasNonWear = 2
+  maximoHorasNonWear = 2,
+  durBoutMin = dseconds(5)
 )
 
 getSummary(
   df,
   offset = dhours(0),
   minimoHorasValidas = 20,
-  maximoHorasNonWear = 2
+  maximoHorasNonWear = 2,
+  durBoutMin = dseconds(5)
 )
 }
 \arguments{
-\item{df}{data frame with columns timestamp, .criterioRaw & .criterioBout}
+\item{df}{}
 
-\item{offset}{Will add a quantity to the timestamp to assign the instant of time to the appropiate day}
+\item{offset}{}
 
-\item{minimoHorasValidas}{explicar}
+\item{minimoHorasValidas}{}
 
-\item{maximoHorasNonWear}{explicar}
+\item{maximoHorasNonWear}{}
+
+\item{durBoutMin}{}
 }
 \value{
 a list with a summary. This is the info that we use to define activity variables on a daily basis and on a global value.
-
-a list with a summary. This is the info that we use to define activity variables on a daily basis and on a global value.
 }
 \description{
-Generates a summary for a epoch or BIN file
-
 Generates a summary for a epoch or BIN file
 }

@@ -30,9 +30,6 @@ plotOfIntervals(
 
 \item{...}{}
 }
-\value{
-
-}
 \description{
 Title
 }
