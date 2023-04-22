@@ -13,9 +13,10 @@ dailyDuration=function(whenList,whatList,...){
     return(data.frame(day=today(),label="",what="",duration=0) %>% filter(FALSE))
   }
   resultadoEsperado=crossing(
-      whenList %>% #mutate(durRef=as.numeric(difftime(to,from,units = "secs"))) %>%
+      whenList %>% mutate(durRef=as.numeric(difftime(to,from,units = "secs"))) %>%
         select(day,
-               label#,durRef
+               label,
+               durRef
                ),
       what=names(whatList))
   
