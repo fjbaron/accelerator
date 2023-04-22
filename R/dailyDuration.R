@@ -13,7 +13,10 @@ dailyDuration=function(whenList,whatList,...){
     return(data.frame(day=today(),label="",what="",duration=0) %>% filter(FALSE))
   }
   resultadoEsperado=crossing(
-      whenList %>% select(day,label,durRef),
+      whenList %>% #mutate(durRef=as.numeric(difftime(to,from,units = "secs"))) %>%
+        select(day,
+               label#,durRef
+               ),
       what=names(whatList))
   
   duraciones=map2_df(whatList,names(whatList),~ {
