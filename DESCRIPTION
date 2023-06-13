@@ -1,8 +1,8 @@
 Package: accelerator
 Type: Package
 Title: A Tidy Framework For Accelerometry
-Version: 0.6.1
-Date: 2023-04-21
+Version: 0.7.0
+Date: 2023-06-13
 Authors@R: c(person("Francisco J", "Baron-Lopez",
                      role=c("aut","cre"),
                      email="baron@uma.es"),
@@ -27,4 +27,4 @@ Imports:
     furrr
 Author: Francisco J Barón López [aut, cre],
         Julia Wärnber [aut]
-Date/Publication: 2023-04-21 10:00:00 UTC
+Date/Publication: 2023-06-13 10:00:00 UTC

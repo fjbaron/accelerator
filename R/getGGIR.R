@@ -27,7 +27,7 @@ getGGIR=function(base,RAW,start=NA,end=NA,...){
         df=M$metashort %>%
           mutate(
           timestamp = with_tz(ymd_hms(timestamp),tz = "Europe/Madrid")
-        ) %>%  select (timestamp,ENMO,anglez) %>% as_tibble()
+        ) %>%  select (timestamp,ENMO,anglez,everything()) %>% as_tibble()
     
     
     ##NonWear
